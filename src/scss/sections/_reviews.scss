@@ -44,9 +44,10 @@
 
 
             .card-text {
-                font-size: 16px;
+                font-size: 12px;
                 font-family: $font-primary;
                 color: $primary-color;
+                font-weight: 400;
 
             }
 
@@ -65,7 +66,7 @@
         &-review {
             font-family: $font-secondary_italic;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 14px;
             color: $grey-color;
         }
 
