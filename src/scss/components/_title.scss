@@ -63,6 +63,17 @@
     color: $grey-color;
     font-family: $font-primary;
     font-size: 20px;
+    &::before {
+        content: '';
+        width: 70px;
+        height: 2px;
+        display: inline-block;
+        background-color: $blue-color-bg;
+        position: absolute;
+        margin: 60px 120px 0;
+       
+    }
+
 }
 
 // Advantages
@@ -85,13 +96,30 @@
 .personal {
     &-title {
         margin-bottom: 70px;
+        &::before {
+            margin: 60px 0px 30px;
+
+           
+        }
+    
 
         @media (max-width: $laptop) {
             margin-bottom: 30px;
+            &::before {
+                margin: 45px 0px 30px;
+                
+               
+            }
+            
         }
 
         @media (max-width: $tablet) {
-            margin: 40px 0 20px;
+            margin: 50px 0 20px;
+            &::before {
+                margin: 40px 0px 30px;
+                
+               
+            }
         }
 
     }
@@ -101,6 +129,10 @@
 .сriterias {
     &__title {
         margin: 120px 0 90px;
+        &::before {
+            margin: 60px 70px 0;
+           
+        }
 
         @media (max-width: $tablet) {
             margin: 60px 0 60px;
@@ -112,6 +144,10 @@
 
 .reviews {
     &-title {
+        &::before {
+            margin: 60px 148px 0;
+           
+        }
         @media (max-width: $laptop) {
             margin: 80px 0 60px;
         }
