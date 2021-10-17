@@ -3,6 +3,7 @@
 psd-photoshop/**/*
 node_modules/**/*
 dist/**/*
+rezerv/**/*
 .vscode/**/*
 task/**/*
 # files ignore

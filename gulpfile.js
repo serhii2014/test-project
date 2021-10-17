@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
+const rigger = require('gulp-rigger');
 
 
 
@@ -17,8 +18,8 @@ const patchs = {
 		dist: "./dist"
 	},
 	html: {
-		src: "./src/templates/*.html",
-		dist: "./dist"
+		src: "./src/templates/index.html",
+		dist: "./dist/"
 	},
 	scss: {
 		src: "./src/scss/**/*.scss",
@@ -43,6 +44,12 @@ pipe(clean({
 	level: 2
 })).
 pipe(gulp.dest(patchs.cleanCSS.dist));
+
+const htmlTemplates= () =>
+	gulp.src("./src/templates/index.html")
+	.pipe(rigger())
+	.pipe(gulp.dest('./dist'))
+	.pipe(browserSync.stream());
 
 const moveSCSS = () => 
 gulp.src(patchs.scss.src).
@@ -70,17 +77,18 @@ pipe(browserSync.stream());
 const watch = () => {
 	browserSync.init({
 		server: {
-			baseDir: './'
+			baseDir: './dist/'
 		}
 	});
 	gulp.watch(patchs.cleanCSS.src, moveCLEAN);
 	gulp.watch(patchs.scss.src, moveSCSS);
 	gulp.watch(patchs.js.src, moveJS);				
 	gulp.watch(patchs.img.src, moveIMG);
-	gulp.watch('./*.index.html', browserSync.reload);
+	gulp.watch(patchs.html.src, htmlTemplates);
+	gulp.watch('index.html', browserSync.reload);
 }
 
-gulp.task('build', gulp.series(moveCLEAN, gulp.parallel(moveSCSS, moveIMG, moveJS)));
+gulp.task('build', gulp.series(moveCLEAN, gulp.parallel(htmlTemplates,moveSCSS, moveIMG, moveJS)));
 
 gulp.task('dev', gulp.series('build', watch));
 
