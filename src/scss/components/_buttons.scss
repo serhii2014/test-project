@@ -1,0 +1,17 @@
+// BTN 
+.btn {
+	font-size: 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: $font-primary;
+	color: $secondary-color;
+	padding: 16px 25px;
+	background-color: $orang-color;
+	border: none;
+	cursor: pointer;
+}
+
+.btn-primary:hover {
+	color: $primary-color;
+	background-color: $orang-color;
+}

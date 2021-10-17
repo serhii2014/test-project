@@ -1,0 +1,127 @@
+// Header
+
+.header-title {
+    font-size: 34px;
+    text-transform: uppercase;
+    color: $secondary-color;
+    font-family: $font-primary;
+    margin-bottom: 25px;
+
+    @media (max-width: $laptop) {
+        font-size: 25px;
+    }
+
+    @media (max-width: $mobile) {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    &-discription {
+        font-size: 20px;
+        margin: 5px 0;
+        padding: 5px;
+        color: $secondary-color;
+        font-family: $font-primary;
+        background-color: $warning-color_red;
+
+        @media (max-width: $laptop) {
+            font-size: 16px;
+        }
+
+        &:nth-last-child(2) {
+            display: initial;
+            margin-top: 5px;
+
+        }
+
+    }
+}
+
+// Timer title
+.timer-title {
+    font-size: 21px;
+    margin: 55px 0 25px;
+    display: block;
+    color: $secondary-color;
+    font-family: $font-primary;
+
+    @media (max-width: $laptop) {
+        font-size: 16px;
+    }
+
+    .orang {
+        background-color: $orang-color;
+        padding: 5px;
+    }
+
+
+}
+
+// Title
+
+.title {
+    text-transform: uppercase;
+    color: $grey-color;
+    font-family: $font-primary;
+    font-size: 20px;
+}
+
+// Advantages
+
+.advantages {
+    &-title {
+        margin: 160px auto 100px;
+
+        @media (max-width: $tablet) {
+            margin: 100px auto 50px;
+        }
+
+        @media (max-width: $mobile) {
+            margin: 60px auto 30px;
+        }
+    }
+}
+
+// Personal
+.personal {
+    &-title {
+        margin-bottom: 70px;
+
+        @media (max-width: $laptop) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $tablet) {
+            margin: 40px 0 20px;
+        }
+
+    }
+}
+
+// Criterias
+.сriterias {
+    &__title {
+        margin: 120px 0 90px;
+
+        @media (max-width: $tablet) {
+            margin: 60px 0 60px;
+        }
+    }
+}
+
+// Reviews
+
+.reviews {
+    &-title {
+        @media (max-width: $laptop) {
+            margin: 80px 0 60px;
+        }
+
+        @media (max-width: $tablet) {
+            margin: 60px 0 60px;
+        }
+
+    }
+
+
+}

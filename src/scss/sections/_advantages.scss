@@ -1,0 +1,33 @@
+// Advantages Strategy
+
+.advantages {
+	@include flex($direction: column);
+
+	.strategy {
+		@include flex($justify:space-between);
+
+		@media (max-width: $laptop) {
+			padding: 0 50px;
+		}
+
+		&-badge {
+			@include flex($direction:column);
+			max-width: 240px;
+			margin: 40px auto;
+
+			&-title {
+				margin: 25px 0;
+				color: $grey-color;
+				font-family: $font-primary;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+
+			p {
+				color: $grey-color;
+				font-family: $font-primary;
+				font-size: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,108 @@
+// Personal
+
+.personal {
+    @include flex($justify: space-evenly);
+    margin-top: 120px;
+
+    @media (max-width: $tablet) {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    &-img-piple {
+        img {
+            @media (max-width: $laptop) {
+                width: 540px;
+                height: 320px;
+            }
+
+            @media (max-width: $tablet) {
+                width: 640px;
+                height: 420px;
+            }
+            @media (max-width: $tablet) {
+                width: 440px;
+                height: 300px;
+            }
+        }
+    }
+
+    &-icons-info {
+
+        @include flex($direction: column);
+        align-self: self-start;
+
+        @media (max-width:$tablet) {
+            align-self: center;
+        }
+
+        & .icons-info {
+            @include flex($align:baseline,
+                $justify: center,
+                $text-align: center,
+                $direction: column);
+            margin-bottom: 35px;
+
+            & .info-text {
+                font-size: 10px;
+                color: $primary-color;
+                padding-top: 10px;
+                font-family: $font-primary;
+
+                @media (max-width: $tablet) {
+                    font-size: 14px;
+                }
+                @media (max-width: $mobile) {
+                    font-size: 10px;
+                }
+
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    background-image: url(../img/icons/galochka.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    font-weight: 400;
+                    margin-right: 10px;
+                    position: relative;
+                    top: 5px;
+                }
+
+            }
+
+        }
+    }
+
+    &-img-info {
+        max-width: 940px;
+        padding: 0;
+
+        @media (max-width: $laptop) {
+            margin: 0 0 30px 35px;
+        }
+
+        @media (max-width: $tablet) {
+            margin: 0 0 24px 24px;
+
+        }
+
+        & img {
+            margin-top: 50px;
+
+            @media (max-width:$laptop) {
+                width: 100%;
+            }
+
+            @media (max-width: $tablet) {
+                margin-top: 38px;
+            }
+
+            @media (max-width:$tablet) {
+                height: 381px;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+// Form Bottom
+
+.form-bg {
+        background-image: url(../img/form-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 160px 0 150px;
+.form{
+    &-box {
+        @include flex($direction:column);
+
+    }
+
+    &-title {
+        color: $secondary-color;
+        font-weight: 700;
+        font-size: 24px;
+        font-family: $font-primary;
+    }
+
+    &-description {
+        color: $secondary-color;
+        font-weight: 400;
+        font-size: 10px;
+        opacity: 0.4;
+        margin-top: 10px;
+
+    }
+
+    &-box-group {
+        @include flex($justify: space-between);
+        margin: 70px 0 30px;
+        width: 1080px;
+        @media (max-width: $laptop) {
+            @include flex($direction:column);
+          }
+        .form-group{
+            padding: 0;
+            
+        }
+
+    }
+    &-control{
+        background-color: rgba(255, 255, 255,0);
+        width: 350px;
+        padding: 18px 10px;
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 0px;
+        @media (max-width: $laptop) {
+            width: 500px;
+          }
+          @media (max-width: $tablet) {
+            width: 300px;
+          }
+    }
+}
+       
+    }
+ 

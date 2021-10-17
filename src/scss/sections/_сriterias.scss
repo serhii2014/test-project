@@ -1,0 +1,62 @@
+// Criterias
+
+.сriterias {
+  @include flex($direction:column);
+
+  &-box_grid {
+    @media (min-width: $tablet) {
+      display: grid;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      justify-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 10px;
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $laptop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      align-items: center;
+      padding: 35px;
+      border: none;
+      background-color: $grey-color_bg;
+
+      @media (max-width: $tablet) {
+        margin: 30px;
+
+      }
+
+      &-img-top {
+        width: inherit;
+
+      }
+
+      &-body {
+        padding: 0;
+        margin: 0;
+        max-height: 295px;
+
+        @media (max-width: $tablet) {
+          width: 350px;
+        }
+
+        @media (max-width: $mobile) {
+          width: 250px;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 35px 0;
+      }
+
+      &-text {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// Header
+
+.header__bg {
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .header {
+    padding: 180px 15px 160px;
+    @include flex($align: start, $justify: space-between, $text-align:start);
+    @media (max-width: $mobile) {
+      padding: 100px 15px 0;
+    }
+
+    &-form-bg {
+      background-color: $secondary-color_bg;
+      padding: 25px;
+      max-width: 350px;
+      max-height: 360px;
+
+      @media (max-width: $mobile) {
+        max-width: 550px;
+        margin: 0 auto;
+        flex: 0 0 100%;
+      }
+
+      // Form
+      .form-group {
+        margin: 0 0 20px;
+        text-align: center;
+
+        label {
+          text-transform: uppercase;
+          font-size: 20px;
+          margin: 0;
+
+          @media (max-width: $tablet) {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          font-size: 15px;
+          margin: 15px 0 30px;
+
+          @media (max-width: $tablet) {
+            font-size: 10px;
+          }
+
+        }
+      }
+
+      // Btn
+      .btn {
+        display: block;
+        margin: 40px auto 0;
+
+        @media (max-width: $tablet) {
+          margin: 0 auto;
+        }
+
+      }
+    }
+
+    // Timera
+    &-timer_top {
+      max-width: 620px;
+      padding: 0 15px;
+
+      @media (max-width: $tablet) {
+        max-width: 590px;
+      }
+      @media (max-width: $mobile) {
+        margin: 100px auto;
+      }
+    }
+
+    &-timer_bottom {
+      .timer-item-box {
+        @include flex($align:and);
+
+        .number-wrapper {
+
+          .line {
+            margin: 0 60px;
+            @media (max-width: $tablet) {
+              margin: 0 50px;
+            }
+            @media (max-width: $tablet) {
+              margin: 0 40px;
+            }
+          }
+        }
+
+        span {
+          font-size: 25px;
+          display: block;
+          color: $secondary-color;
+          font-family: $font-primary;
+
+          .caption {
+            font-size: 10px;
+
+          }
+
+          .caption-tck {
+            &::after {
+              content: ":";
+              font-size: 25px;
+              display: block;
+              color: $secondary-color;
+              font-family: $font-primary;
+              position: relative;
+              bottom: 55px;
+              left: 55px;
+              @media (max-width: $tablet) {
+                left: 45px;
+              }
+              @media (max-width: $mobile) {
+                left: 35px;
+              }
+              
+            }
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
