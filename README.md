@@ -10,6 +10,6 @@
 Ссылка на репозиторий https://github.com/serhii2014/test-project.git
 
 
-Ccылка на сайт https://serhii2014.github.io/test-project/dist/
+Ccылка на сайт https://serhii2014.github.io/test-project/dist/index.html
 
 Потраченно времени 3 робочих дня.
