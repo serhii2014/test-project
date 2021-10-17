@@ -3,7 +3,9 @@
 .idea/**/*
 psd-photoshop/**/*
 node_modules/**/*
-dist/**/*
+
+# dist/**/* закомител для того чтобы отобразить сайт на github
+
 rezerv/**/*
 .vscode/**/*
 task/**/*
