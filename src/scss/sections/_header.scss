@@ -9,7 +9,7 @@
     padding: 180px 15px 160px;
     @include flex($align: start, $justify: space-between, $text-align:start);
     @media (max-width: $mobile) {
-      padding: 100px 15px 0;
+      padding: 0px 15px 100px;
     }
 
     &-form-bg {
@@ -22,6 +22,7 @@
         max-width: 550px;
         margin: 0 auto;
         flex: 0 0 100%;
+        order:2;
       }
 
       // Form
